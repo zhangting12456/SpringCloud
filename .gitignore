@@ -1,0 +1,11 @@
+microservicecloud-consumer-dept-80/target/**
+microservicecloud-eureka-7001/target/**
+microservicecloud-eureka-7002/target/**
+microservicecloud-eureka-7003/target/**
+microservicecloud-provide-dept-8001/target/**
+microservicecloud-provide-dept-8002/target/**
+microservicecloud-provide-dept-8003/target/**
+.settings/**
+.classpath
+.project
+
