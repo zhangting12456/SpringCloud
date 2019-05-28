@@ -1,0 +1,34 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-getway
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: getway-9527.com
+    prefer-ip-address: true
+#配置路由映射
+#原路径和映射路径都可一访问
+zuul: 
+  routes:
+  #域名映射
+    mydept.serviceId: microservicecloud-dept
+    mydept.path: /mydept/**
+#设置原路径不能被访问
+  #单个真实服务路径不能访问
+  #ignored-services: microservicecloud-dept
+  #多个服务的写法
+  prefix: /atguigu
+  ignored-services: "*"
+    
+
+info:
+  app.name: atguigu-microcloud
+  company.name: www.atguigu.com
+  build.artifactId: microservicecloud-zuul-getway-9527
+  build.version: 0.0.1-SNAPSHOT

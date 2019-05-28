@@ -2,9 +2,8 @@ server:
   port: 80
 
 feign:
-  compression:
-    request:
-      mime-types:
+  hystrix: 
+    enabled: true
   
 eureka:
   client:
